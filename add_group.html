@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>ส่วนปฏิบัติการท่อร้อยสาย </title>
+	<link rel="stylesheet" href="default.css">
+	</head>
+
+	<body>
+
+	<div id="wrapper">
+		<div id="div_header">
+			ระบบปฏิบัติการท่อร้อยสาย
+	</div>
+	<div id="div_subhead">
+		<ul id="menu">
+			<li><a href="add1.php">บันทึกข้อมูลชุมสาย</a></li>
+			<li><a href="add2.php">บันทึกข้อมูลโครงสร้างบ่อพัก</a></li>
+			<li><a href="add3.php">บันทึกข้อมูลการเชื่อมต่อ</a></li>
+			<li><a href="record.php">ข้อมูลชุมสาย</a></li>
+			<li><a href="group.php">User Group</a></li>
+			<li><a href="add_group.html">Add User Group</a></li>
+		</ul>
+	</div>
+	<div id="div_main">
+		<div id="div_left">
+
+		</div>
+		<div id="div_content" class="form">
+			<!--%%%%% Main block %%%%-->
+			<!--Form -->
+				<h2>Add User Group</h2>
+				<form action="group.php" method="post">
+				<label>Group Code</label>
+				<input type="text" name="groupcode">
+
+				<label>Group Name</label>
+				<input type="text" name="groupname">
+
+				<label>Remark</label>
+				<textarea name="remark">Description</textarea><br>
+
+				<label>URL</label>
+				<input type="text" name="url">
+
+				<div class="center">
+					<input type="submit" name="submit" value="Submit">
+					<input type="reset" value="Cancel">
+				</div>
+				</form>
+		</div> <!-- end div_content -->
+
+	</div> <!-- end div_main -->
+
+	<div id="div_footer">
+
+	</div>
+
+</div>
+</body>
+</html>

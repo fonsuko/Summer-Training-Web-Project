@@ -1,12 +1,12 @@
-﻿div#wrapper {
+div#wrapper {
 	margin: 0px auto;
 	width: 70%;
 	min-width:600px;
-	padding-top: 0.3em;
+	padding-top: 0em;
 	box-shadow: 0px 0px 4px 4px lightgray;
 	/*fallback for browser not supporting shadow*/
-	border-left:1px solid #AAAAAA;
-	border-right:1px solid #AAAAAA;
+	border-left:3px solid black;
+	border-right:3px solid black;
 }
 
 body {
@@ -21,13 +21,13 @@ div#div_main{
 div#div_header{
 	font-size: 2em;
 	padding:0.7em;
-	background-color: white;
-	color:black;
+	background-color: black ;
+	color: white ;
 }
 
 div#div_subhead{
-	background-color:#F577A6;
-	border-bottom: 1px solid #333438;
+	background-color: white;
+	border-bottom: 1px solid black;
 }
 
 div#div_left{
@@ -36,8 +36,8 @@ div#div_left{
 	left:0px;
 	bottom:0px;
 	width:10%;
-	background-color:#F5E1E9;
-	border-right: 1px solid #F577A6;
+	background-color: #e6e6e6;
+	border-right: 1px solid black;
 }
 
 div#div_content{
@@ -49,18 +49,18 @@ div#div_content{
 }
 
 div#div_footer{
-	border-top: 3px solid #F577A6;
+	border-top: 3px solid black;
 	text-align:center;
-	padding:1em;
+	padding: 3em;
 }
 
 div#div_footer:after{
-	content: 'Adapted from "For Women-Female" theme from wordpress.com';
+	content: 'ส่วนปฏิบัติการท่อร้อยสาย บมจ.ทีโอที จำกัด มหาชน';
 }
 
 ul#menu{
 	list-style-type: none;
-	font-size:0.9em;
+	font-size:0.6em;
 	margin:0;
 	padding:0.6em;
 }
@@ -68,13 +68,13 @@ ul#menu{
 #menu li{
 	text-align:center;
 	display:inline;
-	border-right: 1px dashed white;
+	border-right: 2px dashed black;
 }
 
 #menu a{
 	font-family: Verdana, sans-serif;
-	padding:0.6em;
-	color:white;
+	padding:0.5em;
+	color:black;
 }
 
 #menu a:link, #menu a:visited{
@@ -83,15 +83,15 @@ ul#menu{
 
 #menu a:hover, #menu a:active{
 	text-decoration:underline;
-	background-color:#DE4B82;
+	background-color:#d9d9d9;
 }
 
 h2{
-	color: #CE658B;
-	margin-top:0.4em;
-	margin-bottom:0.4em;
+	color: black;
+	margin-top:0.3em;
+	margin-bottom:0.6em;
 	padding-left: 1em;
-	border-bottom:2px dotted #F5C8DA;
+	border-bottom: 2px dotted black;
 }
 
 .form label{
