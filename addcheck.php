@@ -1,4 +1,6 @@
-<?php
+
+
+<?php //use for add and retrieve data from database phpmyadmin back to php page
 $link = mysqli_connect("localhost","root","","datatot");
 
 if($link === false){
