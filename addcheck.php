@@ -8,7 +8,7 @@ if($link === false){
 }
 mysql_query("SET NAMES UTF8");
 
-$geography = mysqli_real_escape_string($link, $_REQUEST['geography']);
+$geography = mysqli_real_escape_string($link, $_REQUEST['geography']); //for some case using $_POST to add variable to another form
 $province= mysqli_real_escape_string($link, $_REQUEST['province']);
 $exchange = mysqli_real_escape_string($link, $_REQUEST['exchange']);
 $latitude = mysqli_real_escape_string($link, $_REQUEST['latitude']);
