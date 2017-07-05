@@ -1,6 +1,6 @@
 
 
-<?php require_once('connect.php'); //this is my-trying-recor-form 
+<?php require_once('connect.php'); //this is my-trying-recor-form
 $host="localhost"; // กำหนด host
 $username="root"; // กำหนด username
 $pass_word=""; // กำหนด Password

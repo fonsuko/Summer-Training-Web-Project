@@ -2,11 +2,11 @@
 
 <?php //use for add and retrieve data from database phpmyadmin back to php page
 $link = mysqli_connect("localhost","root","","datatot");
-
+$link->set_charset("utf8");
 if($link === false){
   die("Error: Cannot connect." . mysqli_connect_error());
 }
-mysql_query("SET NAMES UTF8");
+
 
 $geography = mysqli_real_escape_string($link, $_REQUEST['geography']); //for some case using $_POST to add variable to another form
 $province= mysqli_real_escape_string($link, $_REQUEST['province']);

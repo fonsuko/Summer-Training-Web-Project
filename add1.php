@@ -4,7 +4,7 @@
 <head>
 
 	<title>ส่วนปฏิบัติการท่อร้อยสาย </title>
-	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+	<meta http-equiv=Content-Type content="text/html; charset=utf8">
 	<link rel="stylesheet" href="default.css">
 	</head>
 
@@ -75,7 +75,7 @@
 							while($objResuut = mysql_fetch_array($objQuery))
 							{
 								?>
-									<option value="<?php echo $objResuut["PROVINCE_ID"];?>">
+									<option value="<?php echo $objResuut["PROVINCE_NAME"];?>">
 									<?php echo $objResuut["PROVINCE_NAME"];?>
 									</option>
 
