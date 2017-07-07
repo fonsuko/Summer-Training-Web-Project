@@ -2,7 +2,7 @@
 
 <?php //use for add and retrieve data from database phpmyadmin back to php page
 $link = mysqli_connect("localhost","root","","datatot");
-$link->set_charset("utf8");
+$link->set_charset("utf8"); //use utf8 instead of sth at line 10
 if($link === false){
   die("Error: Cannot connect." . mysqli_connect_error());
 }
