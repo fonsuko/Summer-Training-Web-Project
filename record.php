@@ -8,7 +8,7 @@ $db="datatot"; // กำหนดชื่อฐานข้อมูล
 $Conn = mysql_connect( $host,$username,$pass_word) or die ("Error Connection Wit Database");// ติดต่อฐานข้อมูล
 mysql_query("SET NAMES utf8",$Conn);
 mysql_select_db($db) or die("Can not find database"); // เลือกฐานข้อมูล
-mysql_query("SET NAMES UTF8");
+mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
 ?>
 
 <!DOCTYPE html>
