@@ -4,6 +4,7 @@ $(document).ready(function(){
 	$("#geography").change(function(){
 		$("#province").empty();//ล้างข้อมูล
 		$("#Postcode").empty();//ล้างข้อมูล
+		$("#geographyid").empty();
 
 		$.ajax({
 			  url: "addcheck.php",//ที่อยู่ของไฟล์เป้าหมาย
