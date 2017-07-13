@@ -100,7 +100,24 @@ mysql_query("SET NAMES UTF8");
 			<?php ?>
 
                  <tr>
-                    <td>Data1</td>
+                    <td><name="geography">
+											<?php
+												$strSQL = "SELECT geography FROM rec1";
+												mysql_query("SET NAMES UTF8");
+
+												$objQuery = mysql_query($strSQL);
+												while($objResuut = mysql_fetch_array($objQuery))
+												{
+													?>
+														<option value="<?php echo $objResuut["geography"];?>">
+														<?php echo $objResuut["geography"];?>
+														</option>
+
+														<?php
+													}
+											?>
+										</td>
+
                     <td>Data2</td>
                     <td>Data3</td>
                     <td>Data4</td>

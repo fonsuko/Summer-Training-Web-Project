@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>TOT Training</title>
+    <style>
+    /* Always set the map height explicitly to define the size of the div
+    * element that contains the map. */
+    #map {
+        height: 100%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+
+    var locations = [
+      //  ['tot 2541', 13.76539, 100.51238],
+      //  ['tot 2541', 13.76534, 100.51236],
+        ['tot 2541', 13.76548, 100.51062],
+        ['tot 2541', 13.76514, 100.5112],
+        ['tot 2541', 13.76567, 100.5117],
+        ['tot 2541', 13.76354, 100.5129],
+
+      //  ['ทศท 2541', 13.75803, 100.51985],
+      //  ['ทศท 2541', 13.75917, 100.51857],
+      //  ['ทศท 2541', 13.75917, 100.51857],
+      //  ['ทศท 2541', 13.75964, 100.51789],
+
+    ];
+
+
+    // When the user clicks the marker, an info window opens.
+
+    function initMap() {
+        var myLatLng = {lat: 13.75, lng: 100.52};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: myLatLng
+            });
+
+        var count=0;
+        var pathcor =[];
+
+        for (count = 0; count < locations.length; count++) {
+
+
+          var marker = new google.maps.Marker({
+              position: new google.maps.LatLng(locations[count][1], locations[count][2]),
+              map: map
+              });
+              pathcor.push(marker.getPosition());
+
+
+
+            marker.info = new google.maps.InfoWindow({
+                content: locations [count][0]
+                });
+
+
+
+            google.maps.event.addListener(marker, 'click', function() {
+                // this = marker
+                var marker_map = this.getMap();
+                this.info.open(marker_map, this);
+                // Note: If you call open() without passing a marker, the InfoWindow will use the position specified upon construction through the InfoWindowOptions object literal.
+                });
+        }
+      var polPath = new google.maps.Polyline({
+      map: map,
+      path: pathcor,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 2
+    });
+    }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTVD4FJmygewrOtVSjVAbNAEFjX6Aypro&callback=initMap">
+    </script>
+</body>
+</html>
