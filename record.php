@@ -232,8 +232,7 @@ mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
 										</td>
 
 
-										<td><img src="images/Modify.png" width="24" height="24"></td>
-										<td><img src="images/Delete.png" width="24" height="24"></td>
+										
                 </tr>
             </table>
 		</div> <!-- end div_content -->
