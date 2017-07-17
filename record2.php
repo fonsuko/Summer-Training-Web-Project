@@ -1,4 +1,14 @@
-<?php require_once('connect.php'); ?>
+<?php require_once('connect.php'); //this is my-trying-recor-form
+$host="localhost"; // กำหนด host
+$username="root"; // กำหนด username
+$pass_word=""; // กำหนด Password
+$db="datatot"; // กำหนดชื่อฐานข้อมูล
+$Conn = mysql_connect( $host,$username,$pass_word) or die ("Error Connection Wit Database");// ติดต่อฐานข้อมูล
+mysql_query("SET NAMES utf8",$Conn);
+mysql_select_db($db) or die("Can not find database"); // เลือกฐานข้อมูล
+mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,12 +39,15 @@
 			<!--%%%%% Main block %%%%-->
 			<h2>ข้อมูลบ่อพัก</h2>
 			<table>
-                <col width="10%">
-                <col width="20%">
-                <col width="30%">
-                <col width="30%">
-                <col width="5%">
-                <col width="5%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="15%">
+				<col width="15%">
+				<col width="30%">
+				<col width="30%">
+				<col width="30%">
+
 
                 <tr>
                     <th>ชุมสาย</th>
@@ -103,7 +116,7 @@
 
                     <td><name="longitude_ex">
 											<?php
-												$strSQL = "SELECT geography FROM rec2";
+												$strSQL = "SELECT longitude_ex FROM rec2";
 												mysql_query("SET NAMES UTF8");
 
 												$objQuery = mysql_query($strSQL);
@@ -118,15 +131,83 @@
 													}
 											?></td>
 
+											<td><name="type_name">
+												<?php
+													$strSQL = "SELECT type_name FROM rec2";
+													mysql_query("SET NAMES UTF8");
 
+													$objQuery = mysql_query($strSQL);
+													while($objResuut = mysql_fetch_array($objQuery))
+													{
+														?>
+															<option value="<?php echo $objResuut["type_name"];?>">
+															<?php echo $objResuut["type_name"];?>
+															</option>
 
+															<?php
+														}
+												?></td>
 
+												<td><name="street_name">
+													<?php
+														$strSQL = "SELECT street_name FROM rec2";
+														mysql_query("SET NAMES UTF8");
 
+														$objQuery = mysql_query($strSQL);
+														while($objResuut = mysql_fetch_array($objQuery))
+														{
+															?>
+																<option value="<?php echo $objResuut["street_name"];?>">
+																<?php echo $objResuut["street_name"];?>
+																</option>
 
+																<?php
+															}
+													?></td>
 
-                    <td><img src="images/Modify.png" width="24" height="24"></td>
-                    <td><img src="images/Delete.png" width="24" height="24"></td>
+													<td><name="survey_name">
+														<?php
+															$strSQL = "SELECT survey_name FROM rec2";
+															mysql_query("SET NAMES UTF8");
+
+															$objQuery = mysql_query($strSQL);
+															while($objResuut = mysql_fetch_array($objQuery))
+															{
+																?>
+																	<option value="<?php echo $objResuut["survey_name"];?>">
+																	<?php echo $objResuut["survey_name"];?>
+																	</option>
+
+																	<?php
+																}
+														?></td>
+
+														<td><name="date_time">
+															<?php
+																$strSQL = "SELECT date_time FROM rec2";
+																mysql_query("SET NAMES UTF8");
+
+																$objQuery = mysql_query($strSQL);
+																while($objResuut = mysql_fetch_array($objQuery))
+																{
+																	?>
+																		<option value="<?php echo $objResuut["date_time"];?>">
+																		<?php echo $objResuut["date_time"];?>
+																		</option>
+
+																		<?php
+																	}
+															?></td>
+
+                    <td></td>
                 </tr>
+
+								<?php
+									$q="select * from rec1";
+									$result=$mysqli->query($q);
+									mysql_query("SET NAMES UTF8");
+								?>
+
             </table>
 
 		</div> <!-- end div_content -->

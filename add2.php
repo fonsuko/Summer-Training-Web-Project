@@ -40,7 +40,7 @@
 			<!--%%%%% Main block %%%%-->
 			<!--Form -->
 
-			<form method="post" action="record2.php" >
+			<form method="post" action="addcheck2.php" >
 					<h2>บันทึกข้อมูลโครงสร้างบ่อพัก</h2>
 					<label>ชื่อชุมสาย : </label>
 					<input type="text" name="exchange_name" placeholder="เช่น ชุมสายหาดใหญ่,ชุมสายเชียงใหม่">
@@ -82,7 +82,7 @@
 					<input type="text" name="survey_name" placeholder="เช่น พิทักษ์ เอื้อสุจริต">
 
 					<label>วันที่สำรวจ : </label>
-					<input type="date" name="date" placeholder="เช่น 13/07/2560">
+					<input type="date" name="date_time" placeholder="เช่น 13/07/2560">
 
 
 

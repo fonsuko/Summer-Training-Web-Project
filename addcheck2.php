@@ -17,9 +17,9 @@ $street_name = mysqli_real_escape_string($link, $_REQUEST['street_name']);
 $survey_name = mysqli_real_escape_string($link, $_REQUEST['survey_name']);
 $date_time = mysqli_real_escape_string($link,$_REQUEST['date_time']);
 
-$sql = "INSERT INTO rec1 (geography, province, exchange, latitude, longitude, streetName,
- surveyBy) VALUES ('$geography', '$province', '$exchange', '$latitude', '$longitude','$streetName'
- ,'$surveyBy') ";
+$sql = "INSERT INTO rec2 (exchange_name, pothole_name, latitude_ex, longitude_ex, type_name,
+ street_name,survey_name,date_time) VALUES ('$exchange_name', '$pothole_name', '$latitude_ex', '$longitude_ex','$type_name'
+ ,'$street_name','$survey_name','$date_time') ";
 mysql_query("SET NAMES UTF8");
 
 if(mysqli_query($link, $sql)){
@@ -27,7 +27,7 @@ if(mysqli_query($link, $sql)){
     alert('เพิ่มข้อมูลสำเร็จ');
     </script>";
   echo"<script type'text/javascript'>
-      window.location = 'record.php';
+      window.location = 'record2.php';
       </script>";
 }
 else{

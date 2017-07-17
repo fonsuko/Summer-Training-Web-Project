@@ -39,28 +39,7 @@ mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
 		</div>
 		<div id="div_content" class="usergroup">
 			<!--%%%%% Main block %%%%-->
-		<?php
-				/*if(isset($_POST['page'])) {
-				$geography = $_POST["title"];
-				$province = $_POST["province"];
-				$exchange = $_POST["exchange"];
-				$latitude = $_POST["latitude"];
-				$longitude = $_POST["longitude"];
-				$streetName = $_POST["streetName"];
-				$surveyBy = $_POST["surveyBy"];
 
-				require_once('connect.php');
-				if($page=='adduser') {
-					$q="INSERT INTO 'rec1' ('geography','province','exchange','latitude','longitude','streetName','surveyBy')
-					VALUES ('$geography ','$province','$exchange','$latitude','$longitude','$streetName','$surveyBy')";
-					$result=$mysqli->query($q);
-					if(!$result){
-						echo "INSERT failed. Error: ".$mysqli->error ;
-						break;
-					}
-				}
-			}*/
-			?>
 
 			<h2>ข้อมูลชุมสาย</h2>
 			<table>
@@ -88,18 +67,10 @@ mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
 				$q="select * from rec1";
 				$result=$mysqli->query($q);
 				mysql_query("SET NAMES UTF8");
-
-				//if(!$result){
-				//	echo "Select failed. Error: ".$mysqli->error ;
-				//	break;
-				//}
 			?>
 
 
-			<!--	<td><input type='checkbox' <? if ($row['DISABLE'])	 echo "CHECKED"; echo " disabled></td>";?>
-				<td><a href="edit_user.php?userid=<?=$row['USER_ID']?>"><img src="images/Modify.png" width="24" height="24"></a></td>
-				<td><a href='del_user.php?userid=<?=$row['USER_ID']?>'> <img src="images/Delete.png" width="24" height="24"></a></td>
-			</tr><-->
+			
 			<?php ?>
 
                  <tr>
