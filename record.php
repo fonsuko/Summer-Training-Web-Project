@@ -64,13 +64,16 @@ mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
 			}*/
 			?>
 
-			<h2>User Profile</h2>
+			<h2>ข้อมูลชุมสาย</h2>
 			<table>
-                <col width="15%">
-                <col width="30%">
-                <col width="30%">
-                <col width="20%">
                 <col width="5%">
+                <col width="5%">
+                <col width="20%">
+								<col width="15%">
+								<col width="15%">
+								<col width="30%">
+								<col width="30%">
+
 
                 <tr>
                     <th>ภูมิภาค</th>
@@ -78,8 +81,8 @@ mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
                     <th>ชุมสาย</th>
                     <th>Latitude</th>
                     <th>Longitude</th>
-                    <th>ชื่อถนน</th>
-                    <th>ชื่อคนสำรวจ</th>
+                    <th>ถนน</th>
+                    <th>ผู้สำรวจ</th>
                 </tr>
 			<?php
 				$q="select * from rec1";
@@ -118,12 +121,119 @@ mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
 											?>
 										</td>
 
-                    <td>Data2</td>
-                    <td>Data3</td>
-                    <td>Data4</td>
-                    <td><input type='checkbox'></td>
-                    <td><img src="images/Modify.png" width="24" height="24"></td>
-                    <td><img src="images/Delete.png" width="24" height="24"></td>
+                    <td><name="province" required="required">
+
+											<?php
+												$strSQL = "SELECT province FROM rec1";
+												mysql_query("SET NAMES UTF8");
+
+												$objQuery = mysql_query($strSQL);
+												while($objResuut = mysql_fetch_array($objQuery))
+												{
+													?>
+														<option value="<?php echo $objResuut["province"];?>">
+														<?php echo $objResuut["province"];?>
+														</option>
+
+														<?php
+													}
+											?>
+										</td>
+
+									<td><name="exchange">
+												<?php
+													$strSQL = "SELECT exchange FROM rec1";
+													mysql_query("SET NAMES UTF8");
+
+													$objQuery = mysql_query($strSQL);
+													while($objResuut = mysql_fetch_array($objQuery))
+													{
+														?>
+															<option value="<?php echo $objResuut["exchange"];?>">
+															<?php echo $objResuut["exchange"];?>
+															</option>
+
+															<?php
+														}
+												?>
+										</td>
+
+                    <td><name="latitude">
+											<?php
+												$strSQL = "SELECT latitude FROM rec1";
+												mysql_query("SET NAMES UTF8");
+
+												$objQuery = mysql_query($strSQL);
+												while($objResuut = mysql_fetch_array($objQuery))
+												{
+													?>
+														<option value="<?php echo $objResuut["latitude"];?>">
+														<?php echo $objResuut["latitude"];?>
+														</option>
+
+														<?php
+													}
+											?>
+										</td>
+
+											<td><name="longitude">
+												<?php
+													$strSQL = "SELECT longitude FROM rec1";
+													mysql_query("SET NAMES UTF8");
+
+													$objQuery = mysql_query($strSQL);
+													while($objResuut = mysql_fetch_array($objQuery))
+													{
+														?>
+															<option value="<?php echo $objResuut["longitude"];?>">
+															<?php echo $objResuut["longitude"];?>
+															</option>
+
+															<?php
+														}
+												?>
+											</td>
+
+
+                    <td><name="streetName">
+											<?php
+												$strSQL = "SELECT streetName FROM rec1";
+												mysql_query("SET NAMES UTF8");
+
+												$objQuery = mysql_query($strSQL);
+												while($objResuut = mysql_fetch_array($objQuery))
+												{
+													?>
+														<option value="<?php echo $objResuut["streetName"];?>">
+														<?php echo $objResuut["streetName"];?>
+														</option>
+
+														<?php
+													}
+											?>
+										</td>
+
+                    <td><name="surveyBy">
+											<?php
+												$strSQL = "SELECT surveyBy FROM rec1";
+												mysql_query("SET NAMES UTF8");
+
+												$objQuery = mysql_query($strSQL);
+												while($objResuut = mysql_fetch_array($objQuery))
+												{
+													?>
+														<option value="<?php echo $objResuut["surveyBy"];?>">
+														<?php echo $objResuut["surveyBy"];?>
+														</option>
+
+														<?php
+													}
+											?>
+										</td>
+
+
+										<td><img src="images/Modify.png" width="24" height="24"></td>
+										<td><img src="images/Delete.png" width="24" height="24"></td>
                 </tr>
             </table>
 		</div> <!-- end div_content -->
