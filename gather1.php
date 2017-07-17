@@ -27,6 +27,7 @@
 		<ul id="menu">
 			<li><a href="add1.php">บันทึกข้อมูลชุมสาย</a></li>
 		<li><a href="add2.php">บันทึกข้อมูลโครงสร้างบ่อพัก</a></li>
+    <li><a href="gather1.php">ข้อมูล</a></li>
 		<li><a href="record.php">ข้อมูลชุมสาย</a></li>
 		<li><a href="record2.php">ข้อมูลบ่อพัก</a></li>
 		</ul>
