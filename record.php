@@ -28,11 +28,9 @@ mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
 	<div id="div_subhead">
 		<ul id="menu">
 			<li><a href="add1.php">บันทึกข้อมูลชุมสาย</a></li>
-			<li><a href="add2.php">บันทึกข้อมูลโครงสร้างบ่อพัก</a></li>
-			<li><a href="add3.php">บันทึกข้อมูลการเชื่อมต่อ</a></li>
-			<li><a href="record.php">ข้อมูลชุมสาย</a></li>
-			<li><a href="group.php">User Group</a></li>
-			<li><a href="add_group.html">Add User Group</a></li>
+		<li><a href="add2.php">บันทึกข้อมูลโครงสร้างบ่อพัก</a></li>
+		<li><a href="record.php">ข้อมูลชุมสาย</a></li>
+		<li><a href="record2.php">ข้อมูลบ่อพัก</a></li>
 		</ul>
 	</div>
 	<div id="div_main">
@@ -73,6 +71,7 @@ mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
 								<col width="15%">
 								<col width="30%">
 								<col width="30%">
+								<col width="30%">
 
 
                 <tr>
@@ -83,6 +82,7 @@ mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
                     <th>Longitude</th>
                     <th>ถนน</th>
                     <th>ผู้สำรวจ</th>
+										<th>วันสำรวจ</th>
                 </tr>
 			<?php
 				$q="select * from rec1";
@@ -231,8 +231,26 @@ mysql_query("SET NAMES UTF8"); //use set $link utf8 instead eiei
 											?>
 										</td>
 
+										<td><name="date">
+											<?php
+												$strSQL = "SELECT date FROM rec1";
+												mysql_query("SET NAMES UTF8");
 
-										
+												$objQuery = mysql_query($strSQL);
+												while($objResuut = mysql_fetch_array($objQuery))
+												{
+													?>
+														<option value="<?php echo $objResuut["date"];?>">
+														<?php echo $objResuut["date"];?>
+														</option>
+
+														<?php
+													}
+											?>
+										</td>
+
+
+
                 </tr>
             </table>
 		</div> <!-- end div_content -->

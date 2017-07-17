@@ -27,10 +27,8 @@
 		<ul id="menu">
 			<li><a href="add1.php">บันทึกข้อมูลชุมสาย</a></li>
 		<li><a href="add2.php">บันทึกข้อมูลโครงสร้างบ่อพัก</a></li>
-		<li><a href="add3.php">บันทึกข้อมูลการเชื่อมต่อ</a></li>
 		<li><a href="record.php">ข้อมูลชุมสาย</a></li>
-		<li><a href="group.php">User Group</a></li>
-		<li><a href="add_group.html">Add User Group</a></li>
+		<li><a href="record2.php">ข้อมูลบ่อพัก</a></li>
 		</ul>
 	</div>
 
@@ -42,21 +40,21 @@
 			<!--%%%%% Main block %%%%-->
 			<!--Form -->
 
-			<form action="user.php" method="post">
+			<form method="post" action="record2.php" >
 					<h2>บันทึกข้อมูลโครงสร้างบ่อพัก</h2>
 					<label>ชื่อชุมสาย : </label>
-					<input type="text" name="exchange" placeholder="เช่น ชุมสายหาดใหญ่,ชุมสายเชียงใหม่">
+					<input type="text" name="exchange_name" placeholder="เช่น ชุมสายหาดใหญ่,ชุมสายเชียงใหม่">
 
 					<label>ชื่อบ่อพัก : </label>
-					<input type="text" name="potholeName" placeholder="เช่น MH#001, PB#001 เป็นต้น">
+					<input type="text" name="pothole_name" placeholder="เช่น MH#001, PB#001 เป็นต้น">
 
 					<label>Latitude : </label>
-					<input type="text" name="latitude" placeholder="เช่น 15.874539 เป็นต้น">
+					<input type="text" name="latitude_ex" placeholder="เช่น 15.874539 เป็นต้น">
 
 					<label>Longitude : </label>
-					<input type="text" name="longtitude" placeholder="เช่น 100.43243 เป็นต้น">
+					<input type="text" name="longitude_ex" placeholder="เช่น 100.43243 เป็นต้น">
 
-					<form action="user.php" method="post">
+					<form method="post" action="record2.php" >
 							<label>ประเภทบ่อพัก : </label>
 							<select name="pothole">
 								<?php
@@ -74,15 +72,17 @@
 								?>
 							</select>
 					<label>ชนิด : </label>
-					<input type="text" name="type" placeholder="เช่น A-1,JUF11 เป็นต้น">
+					<input type="text" name="type_name" placeholder="เช่น A-1,JUF11 เป็นต้น">
 
 					<label>ชื่อถนน : </label>
-					<input type="text" name="streetName" placeholder="เช่น ถนนสุขุมวิท" >
+					<input type="text" name="street_name" placeholder="เช่น ถนนสุขุมวิท" >
 
 
 					<label>ผู้สำรวจ : </label>
-					<input type="text" name="surveyBy" placeholder="เช่น พิทักษ์ เอื้อสุจริต">
+					<input type="text" name="survey_name" placeholder="เช่น พิทักษ์ เอื้อสุจริต">
 
+					<label>วันที่สำรวจ : </label>
+					<input type="date" name="date" placeholder="เช่น 13/07/2560">
 
 
 

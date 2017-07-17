@@ -15,10 +15,11 @@ $latitude = mysqli_real_escape_string($link, $_REQUEST['latitude']);
 $longitude = mysqli_real_escape_string($link, $_REQUEST['longitude']);
 $streetName = mysqli_real_escape_string($link, $_REQUEST['streetName']);
 $surveyBy = mysqli_real_escape_string($link, $_REQUEST['surveyBy']);
+$date = mysqli_real_escape_string($link,$_REQUEST['date']);
 
 $sql = "INSERT INTO rec1 (geography, province, exchange, latitude, longitude, streetName,
- surveyBy) VALUES ('$geography', '$province', '$exchange', '$latitude', '$longitude','$streetName'
- ,'$surveyBy') ";
+ surveyBy,date) VALUES ('$geography', '$province', '$exchange', '$latitude', '$longitude','$streetName'
+ ,'$surveyBy','date') ";
 mysql_query("SET NAMES UTF8");
 
 if(mysqli_query($link, $sql)){
