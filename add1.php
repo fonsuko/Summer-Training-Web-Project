@@ -99,9 +99,9 @@
 					<input type="text" name="surveyBy" placeholder="เช่น พิทักษ์ เอื้อสุจริต" required="required">
 
 					<label>วันที่สำรวจ : </label>
-					<input type="date" name="date">
 
 
+					<input name="date" type="date" value="<?php echo date("d-m-y");?>">
 
 
 					<!--<h2>รายละเอียดท่อร้อยสาย</h2>
